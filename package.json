@@ -1,0 +1,43 @@
+{
+    "name": "nitlix-seal",
+    "version": "0.0.11",
+    "author": "nitlix-hq",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nitlix/nitlix-seal.git"
+    },
+    "homepage": "https://github.com/nitlix/nitlix-seal",
+    "description": "Nitlix Seal",
+    "module": "./dist/exports.js",
+    "main": "./dist/exports.js",
+    "types": "./dist/exports.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/exports.d.ts",
+            "default": "./dist/exports.js"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "type": "module",
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc --watch",
+        "check": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@noble/curves": "^2.2.0",
+        "@noble/hashes": "^2.2.0",
+        "@noble/post-quantum": "^0.6.1",
+        "@scure/bip39": "^2.2.0",
+        "@types/node": "^25.9.3"
+    },
+    "devDependencies": {
+        "@types/bun": "latest"
+    },
+    "peerDependencies": {
+        "typescript": "^5.9.3"
+    }
+}
